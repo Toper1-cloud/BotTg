@@ -1,0 +1,24 @@
+reg = input('Для начало зарегистрируйтесь [нажать "R"], если не впервый раз введите "логин":').lower()
+def log_reg(reg):
+  if reg != 'логин':
+    if reg == 'r':
+      log = input('Введите логин:')
+      if len(log) >= 5:
+        print('Вы успешно зарегестрировались!')
+        return log
+      else:
+        log_reg(reg)
+  elif reg == 'логин':
+    log = input('Введите логин:')
+    if log == log:
+      print('Успешная авторизация!')
+      return log
+    else:
+      print('Ошибка! Повторите ещё раз)
+      log_reg(reg)
+  else:
+    print('Ошибка! Повторите ещё раз)
+    log_reg(reg)
+start = log_reg(reg)
+print('Вы успешно вошли в акаунт' , start + '!')
+print('
