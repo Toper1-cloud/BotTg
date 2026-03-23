@@ -21,4 +21,14 @@ def log_reg(reg):
     log_reg(reg)
 start = log_reg(reg)
 print('Вы успешно вошли в акаунт' , start + '!')
-print('
+print('Чтобы продолжить использовать бота, выберите следующее действие:')
+print('1 - купить мерч')
+print('2 - заказать рекламу'
+print('help - написать в поддержку')
+print('off - выключить бота')
+begining = input('Действие(№):')
+while begining != 'off':
+  if begining == '1':
+    print('Мерч огненный - 3000 руб')
+    print('Мерч ледяной - 2900 руб')
+    tipe = input('Выберите тип мерча:')
